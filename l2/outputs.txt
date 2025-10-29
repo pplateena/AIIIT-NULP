@@ -1,0 +1,387 @@
+============================================================
+TASK 5: TRAIN/VALIDATION/TEST SPLIT
+============================================================
+Features shape: (891, 13)
+Target shape: (891,)
+Target distribution: [549 342] (0: died, 1: survived)
+
+Split results:
+Train set: 534 samples (59.9%)
+Validation set: 178 samples (20.0%)
+Test set: 179 samples (20.1%)
+
+Class distribution:
+Train: [329 205] (38.4% survived)
+Val:   [110  68] (38.2% survived)
+Test:  [110  69] (38.5% survived)
+
+PyTorch tensors created:
+X_train_tensor: torch.Size([534, 13]), dtype: torch.float32, device: cuda:0
+y_train_tensor: torch.Size([534]), dtype: torch.float32, device: cuda:0
+
+DataLoaders created with batch size: 32
+Train batches: 17
+Val batches: 6
+Test batches: 6
+✅ Task 5 completed: Train/Validation/Test split ready
+
+
+
+============================================================
+TASK 6A: BASIC FEEDFORWARD NEURAL NETWORK
+============================================================
+Input dimensions: 13
+
+Basic Model Architecture:
+BasicNet(
+  (hidden1): Linear(in_features=13, out_features=128, bias=True)
+  (hidden2): Linear(in_features=128, out_features=64, bias=True)
+  (hidden3): Linear(in_features=64, out_features=32, bias=True)
+  (output): Linear(in_features=32, out_features=1, bias=True)
+  (activation): ReLU()
+)
+
+Total parameters: 12,161
+Trainable parameters: 12,161
+
+✅ Basic model created and configured
+   Loss function: Binary Cross Entropy
+   Optimizer: Adam (lr=0.001)
+   Device: cuda
+
+
+============================================================
+TASK 6B: ADVANCED NETWORK WITH DROPOUT/BATCHNORM/L2
+============================================================
+Advanced Model Architecture:
+AdvancedNet(
+  (hidden1): Linear(in_features=13, out_features=128, bias=True)
+  (bn1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout1): Dropout(p=0.3, inplace=False)
+  (hidden2): Linear(in_features=128, out_features=64, bias=True)
+  (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout2): Dropout(p=0.3, inplace=False)
+  (hidden3): Linear(in_features=64, out_features=32, bias=True)
+  (bn3): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout3): Dropout(p=0.15, inplace=False)
+  (output): Linear(in_features=32, out_features=1, bias=True)
+  (activation): ReLU()
+)
+
+Total parameters: 12,609
+Trainable parameters: 12,609
+
+Regularization techniques used:
+  • Dropout: 0.3 rate (0.15 near output)
+  • Batch Normalization: After each hidden layer
+  • L2 Regularization: 0.01 weight decay
+  • Adam optimizer with 0.001 learning rate
+✅ Advanced model created and configured
+
+
+============================================================
+TASK 7: ACTIVATION FUNCTIONS COMPARISON
+============================================================
+
+--- Creating models with RELU activation ---
+  ✓ Basic relu model created
+  ✓ Advanced relu model created
+
+--- Creating models with LEAKY_RELU activation ---
+  ✓ Basic leaky_relu model created
+  ✓ Advanced leaky_relu model created
+
+--- Creating models with GELU activation ---
+  ✓ Basic gelu model created
+  ✓ Advanced gelu model created
+
+Total models created: 6
+Model variants:
+  • basic_relu
+  • advanced_relu
+  • basic_leaky_relu
+  • advanced_leaky_relu
+  • basic_gelu
+  • advanced_gelu
+
+--- Activation Function Properties ---
+ReLU: f(x) = max(0, x)
+  • Simple, fast computation
+  • Can cause 'dying ReLU' problem
+  • Most commonly used
+
+LeakyReLU: f(x) = max(αx, x) where α=0.2
+  • Prevents dying ReLU problem
+  • Small gradient for negative values
+  • Good for avoiding saturation
+
+GELU: f(x) = x * Φ(x) (Gaussian Error Linear Unit)
+  • Smooth, differentiable everywhere
+  • Used in modern transformers
+  • Better gradient flow
+✅ All activation function models created
+
+============================================================
+TASK 8: TRAINING ALL MODELS
+============================================================
+Training configuration (FIXED HYPERPARAMETERS):
+  • Epochs: 15 (fixed)
+  • Batch size: 32 (fixed)
+  • Learning rate: 0.001 (fixed - no reduction)
+  • Optimizer: Adam (fixed)
+  • Early stopping enabled: False
+  ✅ No early stopping - hyperparameters remain fixed throughout training
+
+============================================================
+STARTING TRAINING WITH FIXED HYPERPARAMETERS
+============================================================
+
+========================================
+Training: BASIC_RELU
+========================================
+📋 Model using fixed LR: 0.001
+Epoch [1/15] - Train Loss: 0.6708, Train Acc: 0.6161, Val Loss: 0.6485, Val Acc: 0.6180
+Epoch [5/15] - Train Loss: 0.4659, Train Acc: 0.7809, Val Loss: 0.5009, Val Acc: 0.7360
+Epoch [10/15] - Train Loss: 0.4185, Train Acc: 0.8127, Val Loss: 0.4405, Val Acc: 0.7753
+Epoch [15/15] - Train Loss: 0.4073, Train Acc: 0.8127, Val Loss: 0.4442, Val Acc: 0.7865
+
+📊 Final Results for basic_relu:
+  Training completed at epoch: 15
+  Train accuracy: 0.8127
+  Validation accuracy: 0.7865
+  Train loss: 0.4073
+  Validation loss: 0.4442
+  Overfitting gap: 0.0262
+  Final learning rate: 0.001 (should be 0.001)
+
+========================================
+Training: ADVANCED_RELU
+========================================
+📋 Model using fixed LR: 0.001
+Epoch [1/15] - Train Loss: 0.6497, Train Acc: 0.6517, Val Loss: 0.6187, Val Acc: 0.7360
+Epoch [5/15] - Train Loss: 0.4600, Train Acc: 0.7940, Val Loss: 0.4493, Val Acc: 0.8202
+Epoch [10/15] - Train Loss: 0.4532, Train Acc: 0.8034, Val Loss: 0.4288, Val Acc: 0.8427
+Epoch [15/15] - Train Loss: 0.4254, Train Acc: 0.8315, Val Loss: 0.4311, Val Acc: 0.8371
+
+📊 Final Results for advanced_relu:
+  Training completed at epoch: 15
+  Train accuracy: 0.8315
+  Validation accuracy: 0.8371
+  Train loss: 0.4254
+  Validation loss: 0.4311
+  Overfitting gap: 0.0056
+  Final learning rate: 0.001 (should be 0.001)
+
+========================================
+Training: BASIC_LEAKY_RELU
+========================================
+📋 Model using fixed LR: 0.001
+Epoch [1/15] - Train Loss: 0.6617, Train Acc: 0.6461, Val Loss: 0.6164, Val Acc: 0.6629
+Epoch [5/15] - Train Loss: 0.4606, Train Acc: 0.7978, Val Loss: 0.4576, Val Acc: 0.7697
+Epoch [10/15] - Train Loss: 0.4255, Train Acc: 0.8202, Val Loss: 0.4405, Val Acc: 0.7584
+Epoch [15/15] - Train Loss: 0.4066, Train Acc: 0.8090, Val Loss: 0.4451, Val Acc: 0.7809
+
+📊 Final Results for basic_leaky_relu:
+  Training completed at epoch: 15
+  Train accuracy: 0.8090
+  Validation accuracy: 0.7809
+  Train loss: 0.4066
+  Validation loss: 0.4451
+  Overfitting gap: 0.0281
+  Final learning rate: 0.001 (should be 0.001)
+
+========================================
+Training: ADVANCED_LEAKY_RELU
+========================================
+📋 Model using fixed LR: 0.001
+Epoch [1/15] - Train Loss: 0.5966, Train Acc: 0.6854, Val Loss: 0.5977, Val Acc: 0.7247
+Epoch [5/15] - Train Loss: 0.4647, Train Acc: 0.7921, Val Loss: 0.4435, Val Acc: 0.8146
+Epoch [10/15] - Train Loss: 0.4375, Train Acc: 0.8240, Val Loss: 0.4312, Val Acc: 0.8258
+Epoch [15/15] - Train Loss: 0.4006, Train Acc: 0.8240, Val Loss: 0.4278, Val Acc: 0.8258
+
+📊 Final Results for advanced_leaky_relu:
+  Training completed at epoch: 15
+  Train accuracy: 0.8240
+  Validation accuracy: 0.8258
+  Train loss: 0.4006
+  Validation loss: 0.4278
+  Overfitting gap: 0.0019
+  Final learning rate: 0.001 (should be 0.001)
+
+========================================
+Training: BASIC_GELU
+========================================
+📋 Model using fixed LR: 0.001
+Epoch [1/15] - Train Loss: 0.6733, Train Acc: 0.5974, Val Loss: 0.6430, Val Acc: 0.6180
+Epoch [5/15] - Train Loss: 0.4608, Train Acc: 0.7734, Val Loss: 0.4601, Val Acc: 0.7584
+Epoch [10/15] - Train Loss: 0.4368, Train Acc: 0.8109, Val Loss: 0.4466, Val Acc: 0.7640
+Epoch [15/15] - Train Loss: 0.4227, Train Acc: 0.7959, Val Loss: 0.4384, Val Acc: 0.7978
+
+📊 Final Results for basic_gelu:
+  Training completed at epoch: 15
+  Train accuracy: 0.7959
+  Validation accuracy: 0.7978
+  Train loss: 0.4227
+  Validation loss: 0.4384
+  Overfitting gap: 0.0019
+  Final learning rate: 0.001 (should be 0.001)
+
+========================================
+Training: ADVANCED_GELU
+========================================
+📋 Model using fixed LR: 0.001
+Epoch [1/15] - Train Loss: 0.6515, Train Acc: 0.6479, Val Loss: 0.6581, Val Acc: 0.7247
+Epoch [5/15] - Train Loss: 0.4697, Train Acc: 0.7903, Val Loss: 0.4533, Val Acc: 0.8258
+Epoch [10/15] - Train Loss: 0.4147, Train Acc: 0.8315, Val Loss: 0.4301, Val Acc: 0.8427
+Epoch [15/15] - Train Loss: 0.4171, Train Acc: 0.8146, Val Loss: 0.4309, Val Acc: 0.8483
+
+📊 Final Results for advanced_gelu:
+  Training completed at epoch: 15
+  Train accuracy: 0.8146
+  Validation accuracy: 0.8483
+  Train loss: 0.4171
+  Validation loss: 0.4309
+  Overfitting gap: 0.0337
+  Final learning rate: 0.001 (should be 0.001)
+
+🎉 All 6 models trained successfully!
+✅ Task 8 completed: Model training finished with FIXED HYPERPARAMETERS
+✅ Compliance: Fixed LR (0.001), Fixed optimizer (Adam), Fixed epochs (15)
+
+============================================================
+TASK 9: MODEL EVALUATION METRICS
+============================================================
+Evaluating all models on test set...
+Test set size: 179 samples
+
+--- Evaluating BASIC_RELU ---
+Test Accuracy: 0.7877
+Test Precision: 0.7067
+Test Recall: 0.7681
+F1-Score: 0.7361
+ROC-AUC: 0.8432
+
+--- Evaluating ADVANCED_RELU ---
+Test Accuracy: 0.8101
+Test Precision: 0.8182
+Test Recall: 0.6522
+F1-Score: 0.7258
+ROC-AUC: 0.8433
+
+--- Evaluating BASIC_LEAKY_RELU ---
+Test Accuracy: 0.7821
+Test Precision: 0.7083
+Test Recall: 0.7391
+F1-Score: 0.7234
+ROC-AUC: 0.8432
+
+--- Evaluating ADVANCED_LEAKY_RELU ---
+Test Accuracy: 0.7933
+Test Precision: 0.8200
+Test Recall: 0.5942
+F1-Score: 0.6891
+ROC-AUC: 0.8428
+
+--- Evaluating BASIC_GELU ---
+Test Accuracy: 0.7989
+Test Precision: 0.8000
+Test Recall: 0.6377
+F1-Score: 0.7097
+ROC-AUC: 0.8360
+
+--- Evaluating ADVANCED_GELU ---
+Test Accuracy: 0.8156
+Test Precision: 0.8750
+Test Recall: 0.6087
+F1-Score: 0.7179
+ROC-AUC: 0.8464
+
+================================================================================
+COMPREHENSIVE MODEL COMPARISON
+================================================================================
+
+Top 3 Best Performing Models (by Test Accuracy):
+        Model  Test_Accuracy  F1_Score  ROC_AUC
+advanced_gelu       0.815642  0.717949 0.846377
+advanced_relu       0.810056  0.725806 0.843347
+   basic_gelu       0.798883  0.709677 0.835968
+
+Architecture Comparison:
+              Test_Accuracy  F1_Score   ROC_AUC
+Architecture
+Advanced           0.806331  0.710944  0.844181
+Basic              0.789572  0.723064  0.840799
+
+Activation Function Comparison:
+            Test_Accuracy  F1_Score   ROC_AUC
+Activation
+GELU             0.807263  0.713813  0.841173
+RELU             0.793296  0.718599  0.843149
+
+==================================================
+DETAILED REPORT - BEST MODEL: ADVANCED_GELU
+==================================================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        Died       0.79      0.95      0.86       110
+    Survived       0.88      0.61      0.72        69
+
+    accuracy                           0.82       179
+   macro avg       0.83      0.78      0.79       179
+weighted avg       0.83      0.82      0.81       179
+
+
+Confusion Matrix:
+
+True Negatives (Correctly predicted died): 104
+False Positives (Incorrectly predicted survived): 6
+False Negatives (Incorrectly predicted died): 27
+True Positives (Correctly predicted survived): 42
+
+✅ Task 9 completed: Comprehensive model evaluation finished
+
+============================================================
+TASK 10: TRAINING CURVES AND VISUALIZATION
+============================================================
+
+<Figure size 2000x1200 with 6 Axes>
+📊 Training curves visualization completed
+
+<Figure size 1800x600 with 4 Axes>
+📈 Architecture and activation analysis completed
+
+======================================================================
+FINAL SUMMARY - PYTORCH IMPLEMENTATION
+======================================================================
+
+🏆 BEST PERFORMING MODEL:
+   Model: advanced_gelu
+   Architecture: Advanced
+   Activation: GELU
+   Test Accuracy: 0.8156
+   F1-Score: 0.7179
+   ROC-AUC: 0.8464
+
+📊 KEY FINDINGS:
+   • Best architecture: Advanced
+   • Best activation: GELU
+   • Average improvement (Advanced vs Basic): 0.0168
+
+🔧 REGULARIZATION EFFECTIVENESS:
+   • Basic models average: 0.7896
+   • Advanced models average: 0.8063
+   • Improvement: 2.12%
+
+🆚 PYTORCH vs TENSORFLOW COMPARISON:
+   • Framework: PyTorch (vs TensorFlow in original)
+   • Model definition: Custom nn.Module classes (vs Sequential)
+   • Training loop: Manual implementation (vs model.fit())
+   • Data handling: DataLoader with TensorDataset (vs direct arrays)
+   • Device management: Explicit GPU/CPU handling (vs automatic)
+   • Metrics calculation: Manual implementation (vs built-in)
+
+✅ Task 10 completed: All visualizations and analysis finished
+🎉 ALL PYTORCH TASKS (5-10) COMPLETED SUCCESSFULLY!
+🔄 Successfully converted TensorFlow implementation to PyTorch!
