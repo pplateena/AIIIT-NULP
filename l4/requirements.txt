@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+lxml
+anthropic
+google-generativeai
+chromadb
+sentence-transformers
+python-dotenv
+click
+tiktoken
+numpy
+pandas
