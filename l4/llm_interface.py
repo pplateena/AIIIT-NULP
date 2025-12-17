@@ -59,7 +59,7 @@ class GeminiLLM(LLMInterface):
             raise ValueError("Google API key not found. Please set GOOGLE_API_KEY in .env file")
         
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('models/gemini-2.5-flash')
         self.embedding_model = genai.GenerativeModel('embedding-001')
     
     def generate_response(self, prompt: str, system_prompt: str = None) -> str:
@@ -100,6 +100,63 @@ class GeminiLLM(LLMInterface):
             embeddings = model.encode(texts)
             return embeddings.tolist()
 
+class OllamaLLM(LLMInterface):
+    """Local LLM using Ollama"""
+    def __init__(self, model_name: str = None, base_url: str = None):
+        self.model_name = model_name or os.getenv('OLLAMA_MODEL', 'phi3')
+        self.base_url = base_url or os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')
+
+        try:
+            import requests
+            self.requests = requests
+            # Test connection
+            response = self.requests.get(f"{self.base_url}/api/tags", timeout=5)
+            if response.status_code != 200:
+                raise ConnectionError(f"Ollama server not responding at {self.base_url}")
+            print(f"✅ Connected to Ollama server, using model: {self.model_name}")
+        except Exception as e:
+            raise ConnectionError(f"Cannot connect to Ollama server at {self.base_url}. "
+                                f"Make sure Ollama is running: 'ollama serve'. Error: {e}")
+
+    def generate_response(self, prompt: str, system_prompt: str = None) -> str:
+        try:
+            # Combine system and user prompt
+            full_prompt = prompt
+            if system_prompt:
+                full_prompt = f"{system_prompt}\n\n{prompt}"
+
+            # Call Ollama API
+            url = f"{self.base_url}/api/generate"
+            payload = {
+                "model": self.model_name,
+                "prompt": full_prompt,
+                "stream": False,
+                "options": {
+                    "temperature": 0.2,  # Lower for more factual responses
+                    "top_k": 10,  # Limit token choices
+                    "top_p": 0.5,  # More focused sampling
+                    "repeat_penalty": 1.2,  # Reduce repetition
+                    "num_predict": 256  # Shorter, more focused responses
+                }
+            }
+
+            response = self.requests.post(url, json=payload, timeout=120)
+            response.raise_for_status()
+
+            result = response.json()
+            return result.get('response', '')
+
+        except Exception as e:
+            print(f"Error generating Ollama response: {e}")
+            return f"Error: {str(e)}"
+
+    def generate_embeddings(self, texts: List[str]) -> List[List[float]]:
+        # Ollama can generate embeddings, but we'll use sentence transformers for consistency
+        from sentence_transformers import SentenceTransformer
+        model = SentenceTransformer(Config.DEFAULT_EMBEDDING_MODEL)
+        embeddings = model.encode(texts)
+        return embeddings.tolist()
+
 class SentenceTransformerEmbeddings:
     def __init__(self, model_name: str = None):
         from sentence_transformers import SentenceTransformer
@@ -114,13 +171,15 @@ class LLMFactory:
     @staticmethod
     def create_llm(provider: str = None) -> LLMInterface:
         provider = provider or Config.DEFAULT_LLM_PROVIDER
-        
+
         if provider.lower() == 'claude':
             return ClaudeLLM()
         elif provider.lower() == 'gemini':
             return GeminiLLM()
+        elif provider.lower() == 'ollama':
+            return OllamaLLM()
         else:
-            raise ValueError(f"Unsupported LLM provider: {provider}")
+            raise ValueError(f"Unsupported LLM provider: {provider}. Use 'claude', 'gemini', or 'ollama'")
     
     @staticmethod
     def create_embedding_model(provider: str = None):
@@ -140,7 +199,13 @@ class RAGPromptTemplate:
         
         Use the provided context documents to answer the user's question. If the information is not available in the context, say so clearly.
         
-        When citing information, reference the source documents by their titles. Be accurate and concise in your responses.
+        IMPORTANT FORMATTING RULES:
+        1. Use markdown formatting for better readability
+        2. When citing sources, use this format: [Source Title](wiki-url) 
+        3. Use **bold** for important terms and machine names
+        4. Use `code blocks` for recipes, formulas, or technical specifications
+        5. Use bullet points and numbered lists where appropriate
+        6. Add a "## References" section at the end with all sources used
         
         If the user asks about specific items, recipes, or game mechanics, provide detailed information from the context."""
     
@@ -149,8 +214,9 @@ class RAGPromptTemplate:
         prompt = "Context documents:\n\n"
         
         for i, chunk in enumerate(context_chunks, 1):
-            prompt += f"Document {i} (from {chunk['source_title']}):\n"
-            prompt += f"{chunk['text']}\n\n"
+            prompt += f"Document {i}: {chunk['source_title']}\n"
+            prompt += f"URL: {chunk['source_url']}\n"
+            prompt += f"Content: {chunk['text']}\n\n"
         
         if dialogue_history:
             prompt += "Previous conversation:\n"
@@ -159,7 +225,16 @@ class RAGPromptTemplate:
                 prompt += f"Assistant: {exchange['assistant']}\n\n"
         
         prompt += f"Question: {question}\n\n"
-        prompt += "Answer based on the context documents above:"
+        prompt += """Answer the question using the context documents above. 
+
+FORMATTING REQUIREMENTS:
+- Use markdown formatting with **bold** for important terms
+- Create clickable citations like: [Source Name](URL)
+- Use bullet points and code blocks where appropriate  
+- Include a "## References" section at the end listing all sources used
+- Make the response well-structured and easy to read
+
+Answer:"""
         
         return prompt
     

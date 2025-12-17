@@ -7,6 +7,7 @@ from wiki_scraper import WikiScraper
 from text_processor import TextProcessor
 from vector_db import VectorDatabase, VectorSearchRanker
 from llm_interface import LLMFactory, RAGPromptTemplate
+from markdown_renderer import render_markdown
 
 class DialogueHistory:
     def __init__(self, filename: str = None):
@@ -123,7 +124,7 @@ class RAGPipeline:
             # Fallback to simple word extraction
             return question.lower().split()
     
-    def search_relevant_context(self, question: str, n_results: int = 5) -> List[Dict]:
+    def search_relevant_context(self, question: str, n_results: int = 10) -> List[Dict]:
         """Search for relevant context using both vector similarity and keywords"""
         # Extract keywords
         keywords = self.extract_search_keywords(question)
@@ -150,23 +151,48 @@ class RAGPipeline:
         """Generate response using RAG pipeline"""
         # Search for relevant context
         context_chunks = self.search_relevant_context(question)
-        
+
         if not context_chunks:
             response = "I couldn't find any relevant information in the GT New Horizons wiki to answer your question."
             return response, []
-        
-        # Get dialogue history if requested
-        history = self.dialogue_history.get_recent_history() if use_history else None
-        
-        # Create RAG prompt
-        system_prompt = RAGPromptTemplate.get_system_prompt()
-        user_prompt = RAGPromptTemplate.format_rag_prompt(question, context_chunks, history)
-        
-        # Generate response
-        try:
-            response = self.llm.generate_response(user_prompt, system_prompt)
-        except Exception as e:
-            response = f"Error generating response: {str(e)}"
+
+        # Check if using Ollama (local model) - use simpler prompts
+        is_ollama = hasattr(self.llm, '__class__') and 'Ollama' in self.llm.__class__.__name__
+
+        if is_ollama:
+            # Simple prompt for local models - anti-hallucination focused
+            system_prompt = """You are a factual assistant. Answer ONLY using the provided context. If the context doesn't contain the answer, say "I don't have that information in the wiki context." Do NOT make up information."""
+
+            prompt = f"""Context from GT New Horizons wiki:
+
+"""
+            for i, chunk in enumerate(context_chunks[:5], 1):  # Use 5 chunks instead of 3
+                prompt += f"[Source {i}] {chunk['text']}\n\n"  # Full text, no truncation
+
+            prompt += f"""Question: {question}
+
+Instructions:
+- Answer using ONLY the context above
+- Be specific and factual
+- If unsure, say you don't know
+- Keep answer concise (2-3 sentences)
+
+Answer:"""
+
+            try:
+                response = self.llm.generate_response(prompt, system_prompt)
+            except Exception as e:
+                response = f"Error: {str(e)}"
+        else:
+            # Complex prompt for cloud models (Gemini/Claude)
+            history = self.dialogue_history.get_recent_history() if use_history else None
+            system_prompt = RAGPromptTemplate.get_system_prompt()
+            user_prompt = RAGPromptTemplate.format_rag_prompt(question, context_chunks, history)
+
+            try:
+                response = self.llm.generate_response(user_prompt, system_prompt)
+            except Exception as e:
+                response = f"Error generating response: {str(e)}"
         
         # Prepare source information
         sources = []
@@ -215,7 +241,8 @@ class RAGPipeline:
                 print("\n🔍 Searching for relevant information...")
                 response, sources = self.generate_response(question)
                 
-                print(f"\n🤖 Assistant: {response}")
+                print(f"\nAssistant:")
+                print(render_markdown(response))
                 
                 if sources:
                     print(f"\n📚 Sources ({len(sources)} found):")

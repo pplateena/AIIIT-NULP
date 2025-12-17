@@ -1,0 +1,21 @@
+Successfully scraped 294 pages
+Saved scraped data to scraped_wiki_data.json
+Processing text into chunks...
+Created 825 chunks from 294 pages
+Filtered 825 chunks down to 441 quality chunks
+Adding chunks to vector database...
+Adding 441 chunks to vector database...
+Generating embeddings for batch 1/5
+Added batch 1, total documents: 112
+Generating embeddings for batch 2/5
+Added batch 2, total documents: 209
+Generating embeddings for batch 3/5
+Added batch 3, total documents: 306
+Generating embeddings for batch 4/5
+Added batch 4, total documents: 405
+Generating embeddings for batch 5/5
+Added batch 5, total documents: 441
+Knowledge base built with 441 chunks
+
+Knowledge base built successfully!
+

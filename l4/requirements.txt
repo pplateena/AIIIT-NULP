@@ -10,3 +10,7 @@ click
 tiktoken
 numpy
 pandas
+rich
+SpeechRecognition
+pyttsx3
+pyaudio

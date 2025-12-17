@@ -1,0 +1,1759 @@
+{
+  "test_run": {
+    "timestamp": "2025-12-17T10:26:13.914062",
+    "llm_provider": "ollama",
+    "total_tests_planned": 21,
+    "total_tests_completed": 21,
+    "in_progress": false,
+    "status": "completed"
+  },
+  "summary": {
+    "total_tests": 21,
+    "successful": 21,
+    "failed": 0,
+    "success_rate": 100.0,
+    "avg_quality_score": 67.75396825396825,
+    "avg_query_time": 3.190929208483015,
+    "avg_sources": 10.0,
+    "avg_response_length": 75.95238095238095,
+    "avg_topic_coverage": 68.25396825396825,
+    "by_category": {
+      "Simple Factual": {
+        "count": 3,
+        "avg_quality": 70.95555555555555
+      },
+      "Process/How-to": {
+        "count": 3,
+        "avg_quality": 70.97777777777777
+      },
+      "Technical": {
+        "count": 3,
+        "avg_quality": 61.26666666666667
+      },
+      "Comparison": {
+        "count": 2,
+        "avg_quality": 77.9
+      },
+      "Complex Synthesis": {
+        "count": 2,
+        "avg_quality": 66.58333333333333
+      },
+      "Troubleshooting": {
+        "count": 2,
+        "avg_quality": 67.58333333333334
+      },
+      "Edge Case": {
+        "count": 2,
+        "avg_quality": 60.900000000000006
+      },
+      "Recipe": {
+        "count": 2,
+        "avg_quality": 67.2
+      },
+      "Specific Item": {
+        "count": 2,
+        "avg_quality": 66.44999999999999
+      }
+    }
+  },
+  "results": [
+    {
+      "timestamp": "2025-12-17T10:23:29.420931",
+      "category": "Simple Factual",
+      "question": "What is an Electric Blast Furnace?",
+      "expected_topics": [
+        "electric blast furnace",
+        "multiblock",
+        "steel"
+      ],
+      "response": " An Electric Blast Furnace is a multiblock machine needed for smelting of materials in GregTech New Horizons. It can be found under the acronym EBF. Recipe times are intentionally long to force players into expanding their infrastructure, and there's often more than one recipe for a particular ingot.",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.2079329531397568
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1537952138081052
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": 0.14591825968954975
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.13234902170385926
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.11741267352733553
+        },
+        {
+          "title": "Volcanus",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Volcanus",
+          "relevance": 0.07655503148581094
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.07140428660240467
+        },
+        {
+          "title": "Large Electric Compressor",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Large_Electric_Compressor",
+          "relevance": 0.05872051392882499
+        },
+        {
+          "title": "Electricity",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electricity",
+          "relevance": 0.051099443435668926
+        },
+        {
+          "title": "Lootgames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Lootgames",
+          "relevance": 0.04137449264526367
+        }
+      ],
+      "metrics": {
+        "response_length_words": 48,
+        "response_length_chars": 301,
+        "num_sources": 10,
+        "topics_covered": 2,
+        "topics_total": 3,
+        "topic_coverage_ratio": 0.6666666666666666,
+        "avg_relevance_score": 0.10565618899665796,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 61.46666666666666,
+        "query_time": 2.545228958129883,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:23:36.684184",
+      "category": "Simple Factual",
+      "question": "What materials do I need to make steel?",
+      "expected_topics": [
+        "steel",
+        "iron",
+        "coal",
+        "carbon"
+      ],
+      "response": " To make steel in GT New Horizons, you first need to smelt iron ore into pure iron dust using a Bricked Blast Furnace (BBF). Then, combine the iron dust with carbon from coal or charcoal in an Alloy Smelter to create steel ingots.",
+      "sources": [
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.19751356693364064
+        },
+        {
+          "title": "Item Storage",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Item_Storage",
+          "relevance": 0.1312349299640504
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.11612385329026366
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.10284796912891475
+        },
+        {
+          "title": "Highly Ultimate Voltage (UHV)",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Highly_Ultimate_Voltage_%28UHV%29",
+          "relevance": 0.10056333541870116
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": 0.054408873128706334
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.05154801991105039
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.032527582736849296
+        },
+        {
+          "title": "MV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/MV",
+          "relevance": 0.0290059429552195
+        },
+        {
+          "title": "Additional Mods",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Additional_Mods",
+          "relevance": 0.012803189517910193
+        }
+      ],
+      "metrics": {
+        "response_length_words": 43,
+        "response_length_chars": 230,
+        "num_sources": 10,
+        "topics_covered": 4,
+        "topics_total": 4,
+        "topic_coverage_ratio": 1.0,
+        "avg_relevance_score": 0.08285772629853064,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 74.3,
+        "query_time": 2.26275897026062,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:23:44.881808",
+      "category": "Simple Factual",
+      "question": "What is the difference between LV, MV, and HV power tiers?",
+      "expected_topics": [
+        "voltage",
+        "tier",
+        "power",
+        "machines"
+      ],
+      "response": " In GregTech: New Horizons, LV (Low Voltage), MV (Medium Voltage), and HV (High Voltage) are electric tiers. LV is the first tier with access to electricity, introducing specialized machines for processing materials efficiently. MV improves upon what's seen in LV, while HV introduces even more advanced machinery. The difference between them lies in their power levels and capabilities; as you progress through these tiers, the machines become more powerful and complex.",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.16765530813393706
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.12477984356203968
+        },
+        {
+          "title": "MV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/MV",
+          "relevance": 0.09068631961865024
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.06309013055665223
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.06285831008189124
+        },
+        {
+          "title": "Planetary Gas Siphon",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Planetary_Gas_Siphon",
+          "relevance": 0.057725609097380226
+        },
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.05349952794723109
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.05100460627845127
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.03444956391859694
+        },
+        {
+          "title": "Bees",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Bees",
+          "relevance": 0.02554449149734462
+        }
+      ],
+      "metrics": {
+        "response_length_words": 71,
+        "response_length_chars": 471,
+        "num_sources": 10,
+        "topics_covered": 4,
+        "topics_total": 4,
+        "topic_coverage_ratio": 1.0,
+        "avg_relevance_score": 0.07312937106921746,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 77.1,
+        "query_time": 3.1969377994537354,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:23:55.412216",
+      "category": "Process/How-to",
+      "question": "How do I set up automated ore processing?",
+      "expected_topics": [
+        "automation",
+        "ore",
+        "processing",
+        "machines"
+      ],
+      "response": " To set up automated ore processing in GT New Horizons, follow these steps:\n\n1. Choose flexible systems that can handle different ores and routes for optimal processing. This includes machines like the Assembly Line, Advanced Assembly Line, Circuit Assembly Line, and Large Thermal Refinery.\n2. Ensure your system is expandable to accommodate larger batches or more complex recipes as needed. Machines such as multiblocks can be upgraded or added to achieve this.\n3. Prioritize unbreakability by using machines that are resistant to breaking, even when processing unusual combinations of ores or non-ores. This includes sturdy multiblock structures like the Ore Washing Plant and Large Thermal Refinery.\n4. Aim for high throughput by selecting logistics systems with minimal bottlenecks. EnderIO Conduits are a good choice, but may not be as optimized as Applied Energistics (AE) in terms of no intervention ore processing.\n5. Minimize human intervention by setting up your system to automatically pull out items at any step of the process and filter rare materials like Rare Earths into dedicated machines for efficient processing.",
+      "sources": [
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.16233251184678954
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1330736085266615
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12938908818498931
+        },
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.12290659300603045
+        },
+        {
+          "title": "Integrated Ore Factory",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Integrated_Ore_Factory",
+          "relevance": 0.118951416015625
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.11527810096740723
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0854914810303746
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0629077386701763
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.032553771221752875
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.025861756620297584
+        }
+      ],
+      "metrics": {
+        "response_length_words": 174,
+        "response_length_chars": 1132,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.09887460660901044,
+        "has_sources": true,
+        "has_numbers": true,
+        "has_lists": true,
+        "has_specific_terms": true,
+        "quality_score": 87.4,
+        "query_time": 5.529578447341919,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:03.827417",
+      "category": "Process/How-to",
+      "question": "What are the steps to progress from Steam Age to LV tier?",
+      "expected_topics": [
+        "steam",
+        "lv",
+        "progression",
+        "bronze"
+      ],
+      "response": " To progress from Steam Age to Low Voltage (LV) tier in GregTech: New Horizons, follow these steps:\n\n1. Craft Electronic Circuits LV components and machines such as the Bending Machine, Wiremill, Lathe, Assembler, Electrolyzer, Chemical Reactor, Fluid Extractor, etc.\n2. Acquire Lithium and Lead for batteries. Pump Oil for Polyethylene and Light Fuel.\n3. Upgrade power generation by building Good Circuits and constructing an Electric Blast Furnace.",
+      "sources": [
+        {
+          "title": "MV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/MV",
+          "relevance": 0.13719518875017658
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.116942977363069
+        },
+        {
+          "title": "ProjectRed Transportation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/ProjectRed_Transportation",
+          "relevance": 0.11228608395455535
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.10992291117156233
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.10444059705971566
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.09845193219898368
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.08851282751900325
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.07677689463147463
+        },
+        {
+          "title": "Thorium High Temperature Reactor",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thorium_High_Temperature_Reactor",
+          "relevance": 0.05642059654351632
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.04548394104928278
+        }
+      ],
+      "metrics": {
+        "response_length_words": 67,
+        "response_length_chars": 450,
+        "num_sources": 10,
+        "topics_covered": 2,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.5,
+        "avg_relevance_score": 0.09464339502413396,
+        "has_sources": true,
+        "has_numbers": true,
+        "has_lists": true,
+        "has_specific_terms": true,
+        "quality_score": 66.7,
+        "query_time": 3.4144809246063232,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:12.112438",
+      "category": "Process/How-to",
+      "question": "How do I build my first multiblock machine?",
+      "expected_topics": [
+        "multiblock",
+        "construction",
+        "blocks"
+      ],
+      "response": " To build your first multiblock machine, follow these steps:\n\n1. First, construct an Assembly Line (AL). This is a prerequisite for progressing from Low Voltage (LV) into higher tiers.\n\n2. Once you have the AL, use it to craft a Bricked Blast Furnace (BBF), which is the starter-tier multiblock needed to smelt your first steel.",
+      "sources": [
+        {
+          "title": "Multiblock Machines#Wallsharing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Multiblock_Machines%23Wallsharing",
+          "relevance": 0.16252235484559482
+        },
+        {
+          "title": "Multiblock Machines",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Multiblock_Machines",
+          "relevance": 0.16252233100373692
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12952259926300128
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12749800682067872
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1188198335950402
+        },
+        {
+          "title": "Multifarm",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Multifarm",
+          "relevance": 0.10672767399322763
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.09552359410177022
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": 0.076592607060253
+        },
+        {
+          "title": "Upcoming Features",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Upcoming_Features",
+          "relevance": 0.06260328292846679
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0586739894779891
+        }
+      ],
+      "metrics": {
+        "response_length_words": 55,
+        "response_length_chars": 328,
+        "num_sources": 10,
+        "topics_covered": 1,
+        "topics_total": 3,
+        "topic_coverage_ratio": 0.3333333333333333,
+        "avg_relevance_score": 0.11010062730897588,
+        "has_sources": true,
+        "has_numbers": true,
+        "has_lists": true,
+        "has_specific_terms": true,
+        "quality_score": 58.83333333333333,
+        "query_time": 3.283937692642212,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:20.670325",
+      "category": "Technical",
+      "question": "How does the GT power system work?",
+      "expected_topics": [
+        "power",
+        "voltage",
+        "amperage",
+        "energy"
+      ],
+      "response": " The GregTech (GT) power system consists of various machines that generate electricity at different tiers. These include LV (Low Voltage), HV (High Voltage), and IV (Insane Voltage). Each machine is required to craft higher tier circuits, with the Circuit Assembly Line being a LuV-tier multiblock for very high-tier circuit production. Power generation includes machines like the Electric Blast Furnace, Pyrolyse Oven, and Implosion Compressor, which generate pollution if not properly spaced out. Automation is limited early on but can be improved with hoppers and later with Applied Energistics 2 (AE2).",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.14811179624716855
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12930263821831423
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.11822640742806131
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1159594169721347
+        },
+        {
+          "title": "Video Guides",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Video_Guides",
+          "relevance": 0.11185936246599469
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.1021952115488094
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0900126412507482
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0839492827857932
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.07619753619034748
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.07599950514652824
+        }
+      ],
+      "metrics": {
+        "response_length_words": 90,
+        "response_length_chars": 606,
+        "num_sources": 10,
+        "topics_covered": 2,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.5,
+        "avg_relevance_score": 0.10518137982539,
+        "has_sources": true,
+        "has_numbers": true,
+        "has_lists": true,
+        "has_specific_terms": true,
+        "quality_score": 69.0,
+        "query_time": 3.5566563606262207,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:29.016436",
+      "category": "Technical",
+      "question": "What is the purpose of different cable types?",
+      "expected_topics": [
+        "cable",
+        "wire",
+        "voltage",
+        "loss"
+      ],
+      "response": " The purpose of different cable types in GregTech: New Horizons is to handle varying amounts of energy efficiently. Each cable type has a maximum amperage capacity, and the general rule is that cables should have an equal Amp capacity to the number of generators or batteries attached. This prevents fires and explosions. For example, a 1x Tin Cable can carry up to 1A, while a 4x Copper Cable can carry up to 4A.",
+      "sources": [
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.18150794859868627
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1670754259494649
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1375957432355547
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.1303210657566574
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12016616725055418
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.11780024732220343
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.11201607450981405
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.10710446649954121
+        },
+        {
+          "title": "Video Guides",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Video_Guides",
+          "relevance": 0.10583653450012206
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.10065084063392846
+        }
+      ],
+      "metrics": {
+        "response_length_words": 73,
+        "response_length_chars": 413,
+        "num_sources": 10,
+        "topics_covered": 1,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.25,
+        "avg_relevance_score": 0.12800745142565267,
+        "has_sources": true,
+        "has_numbers": true,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 47.3,
+        "query_time": 3.3450942039489746,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:37.253509",
+      "category": "Technical",
+      "question": "How does ore multiplication work in GT?",
+      "expected_topics": [
+        "ore",
+        "processing",
+        "multiplication",
+        "crusher"
+      ],
+      "response": " In GT New Horizons, ore multiplication does not explicitly exist as a separate process. Instead, ores are processed through various routes to produce different outputs, including the desired metal and byproducts. The number of output items depends on the specific route taken for each ore type (e.g., Rutile or Grossular). Sorting is recommended based on byproducts to optimize processing efficiency. However, there's no mechanism in place to multiply ores directly within the game context provided.",
+      "sources": [
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.13175730545413222
+        },
+        {
+          "title": "Integrated Ore Factory",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Integrated_Ore_Factory",
+          "relevance": 0.11627536501203263
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.09428261154506051
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0765579246449057
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.06880271166581162
+        },
+        {
+          "title": "Bees",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Bees",
+          "relevance": 0.06464568899248219
+        },
+        {
+          "title": "Moon Travel Checklist",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Moon_Travel_Checklist",
+          "relevance": 0.06160696203627858
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.057935513233237375
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.04715616709253219
+        },
+        {
+          "title": "IsaMill Grinding Machine",
+          "url": "https://wiki.gtnewhorizons.com/wiki/IsaMill_Grinding_Machine",
+          "relevance": 0.040193384836080356
+        }
+      ],
+      "metrics": {
+        "response_length_words": 75,
+        "response_length_chars": 500,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.07592136345125534,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 67.5,
+        "query_time": 3.236027479171753,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:45.009789",
+      "category": "Comparison",
+      "question": "What are the best early game power sources?",
+      "expected_topics": [
+        "power",
+        "generator",
+        "steam",
+        "early"
+      ],
+      "response": " The early game power sources in GT New Horizons can include Coal Generators or Steam Boilers for generating low voltage (LV) electricity. For higher efficiency and output, players might consider using the Electric Blast Furnace (EBF), which is a multiblock machine needed for smelting materials. However, it's important to note that over-volting machines can lead to explosions, so careful planning of power generation layout is essential.",
+      "sources": [
+        {
+          "title": "Video Guides",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Video_Guides",
+          "relevance": 0.10397820472717284
+        },
+        {
+          "title": "Magic Energy Absorber",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Magic_Energy_Absorber",
+          "relevance": 0.0835848691201413
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.06257471153595859
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.05757518862849162
+        },
+        {
+          "title": "Rocket",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Rocket",
+          "relevance": 0.05691676139831543
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.04555098958939793
+        },
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.033707597514268745
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": 0.03232078552246094
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.031037599885600974
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.023252312418402702
+        }
+      ],
+      "metrics": {
+        "response_length_words": 66,
+        "response_length_chars": 440,
+        "num_sources": 10,
+        "topics_covered": 4,
+        "topics_total": 4,
+        "topic_coverage_ratio": 1.0,
+        "avg_relevance_score": 0.053049902034021115,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": true,
+        "has_specific_terms": true,
+        "quality_score": 86.6,
+        "query_time": 2.754826784133911,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:24:52.479722",
+      "category": "Comparison",
+      "question": "Should I use bronze or steel tools first?",
+      "expected_topics": [
+        "bronze",
+        "steel",
+        "tools",
+        "progression"
+      ],
+      "response": " The provided context does not specify which material is better to use first between bronze or steel tools in GT New Horizons. However, it mentions that the Magnum Torch (disabled on official servers), a tool used for mining, requires Meteoric Iron which can only be found later in the game. This suggests that you might want to progress beyond Bronze before using Steel tools. But again, without specific information about their properties or efficiency compared to each other, it's not possible to definitively say whether bronze or steel should be used first.",
+      "sources": [
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.07762615668655537
+        },
+        {
+          "title": "Moon Travel Checklist",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Moon_Travel_Checklist",
+          "relevance": 0.05273964789096366
+        },
+        {
+          "title": "GT Tools",
+          "url": "https://wiki.gtnewhorizons.com/wiki/GT_Tools",
+          "relevance": 0.03414569497434851
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.029017969551947208
+        },
+        {
+          "title": "Equippable Gear",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Equippable_Gear",
+          "relevance": 0.027382088388445767
+        },
+        {
+          "title": "Lootgames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Lootgames",
+          "relevance": 0.013175440385518804
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": -0.020177834920006466
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": -0.027454525988203554
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": -0.02777402349072844
+        },
+        {
+          "title": "Moon Travel Checklist",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Moon_Travel_Checklist",
+          "relevance": -0.02993452344621931
+        }
+      ],
+      "metrics": {
+        "response_length_words": 92,
+        "response_length_chars": 562,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.012874609003262155,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 69.2,
+        "query_time": 2.4683609008789062,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:01.147453",
+      "category": "Complex Synthesis",
+      "question": "What machines and materials do I need for a complete LV setup?",
+      "expected_topics": [
+        "lv",
+        "machines",
+        "materials",
+        "setup"
+      ],
+      "response": " For a complete Low Voltage (LV) setup in GregTech: New Horizons, you need to craft Electronic Circuits using LV components such as Motor, Piston, Pump, Robot Arm, Sensor, Emitter. You also need machines like the Bending Machine (priority), Wiremill (priority), Lathe, Assembler, Electrolyzer, Chemical Reactor, Fluid Extractor. Additionally, you should acquire Lithium and Lead for battery production, pump oil for Polyethylene, upgrade power generation, construct an Electric Blast Furnace, and make Mica (or Alumino Silicate Wool) if possible.",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.25058328498581744
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.20848449563248922
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.20708532333374025
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.1816176743597101
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.17940394083658853
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.17662437577536647
+        },
+        {
+          "title": "MV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/MV",
+          "relevance": 0.13649166699165075
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.13207079569498698
+        },
+        {
+          "title": "Upcoming Features",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Upcoming_Features",
+          "relevance": 0.13030405044555665
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.12766413688659667
+        }
+      ],
+      "metrics": {
+        "response_length_words": 78,
+        "response_length_chars": 546,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.1730329744942503,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 67.8,
+        "query_time": 3.666260004043579,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:10.364564",
+      "category": "Complex Synthesis",
+      "question": "How does the progression system work from start to HV tier?",
+      "expected_topics": [
+        "progression",
+        "tier",
+        "steam",
+        "lv",
+        "mv",
+        "hv"
+      ],
+      "response": " The progression system in GregTech: New Horizons starts with Low Voltage (LV), where goals include batch crafting electronic circuits and acquiring Lithium and Lead for batteries. From there, the player can upgrade power generation, construct an Electric Blast Furnace, and work towards Mega Voltage (MV) tier. Key machines in this progression are the Bending Machine, Wiremill, Lathe, Assembler, Electrolyzer, Chemical Reactor, Fluid Extractor, and Electric Blast Furnace. The player can also aim for side quests like increasing hearts by eating various foods or visiting the Twilight Forest.",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.18252188364699626
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.12814236029950218
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12691602751940287
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.10195878106657723
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.09184538496664597
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.09172410082367517
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0899586604773288
+        },
+        {
+          "title": "Bees",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Bees",
+          "relevance": 0.08618337441196097
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.08496288547592457
+        },
+        {
+          "title": "ProjectRed Transportation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/ProjectRed_Transportation",
+          "relevance": 0.08000005542211855
+        }
+      ],
+      "metrics": {
+        "response_length_words": 87,
+        "response_length_chars": 594,
+        "num_sources": 10,
+        "topics_covered": 4,
+        "topics_total": 6,
+        "topic_coverage_ratio": 0.6666666666666666,
+        "avg_relevance_score": 0.10642135141101325,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 65.36666666666666,
+        "query_time": 4.21575927734375,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:18.138645",
+      "category": "Troubleshooting",
+      "question": "Why isn't my machine receiving power?",
+      "expected_topics": [
+        "power",
+        "machine",
+        "cable",
+        "voltage"
+      ],
+      "response": " The machine might not be receiving power if it is not properly connected to a valid power network. Ensure that GT cables or wires are used for connecting the IC2 machines and other devices requiring energy, paying attention to the EU output of each device. Also, make sure at least one GT machine (a machine hull will do) is present in the setup for power to transfer on GT cableswires due to ENet idiosyncrasies. If all these conditions are met but the issue persists, check if there's a compatibility problem with any additional mods installed as they may cause crashes or bugs according to the provided context.",
+      "sources": [
+        {
+          "title": "Additional Mods",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Additional_Mods",
+          "relevance": -0.01394963264465332
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": -0.03350767467332924
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": -0.06916293475938881
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": -0.09418069309658475
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": -0.10443987240867011
+        },
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": -0.1151424934824848
+        },
+        {
+          "title": "Equippable Gear",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Equippable_Gear",
+          "relevance": -0.12929468154907228
+        },
+        {
+          "title": "Electricity",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electricity",
+          "relevance": -0.13257684241893683
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": -0.1374143803454786
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": -0.1408905497776615
+        }
+      ],
+      "metrics": {
+        "response_length_words": 107,
+        "response_length_chars": 615,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": -0.09705597551562603,
+        "has_sources": true,
+        "has_numbers": true,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 70.7,
+        "query_time": 2.772557497024536,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:26.678053",
+      "category": "Troubleshooting",
+      "question": "What should I do if my Electric Blast Furnace isn't forming?",
+      "expected_topics": [
+        "electric blast furnace",
+        "multiblock",
+        "structure"
+      ],
+      "response": " Check if your Electric Blast Furnace has enough power input. Recipe times are intentionally long in GTNH to force the player into expanding their infrastructure. There is often more than one recipe for a particular ingot, so you might want to try using Wrought Iron Dust instead of Iron Dust for faster cooking time and energy saving. If it's still not forming, ensure that all inputs are correct according to the Electric Blast Furnace recipes in GTNH wiki.",
+      "sources": [
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.20213510378954944
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.17580298708516254
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": 0.1360949556520135
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.12716527418656784
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.11829866899794997
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.0967772541858847
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.09460746342293058
+        },
+        {
+          "title": "MV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/MV",
+          "relevance": 0.07186560417672938
+        },
+        {
+          "title": "Moon Travel Checklist",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Moon_Travel_Checklist",
+          "relevance": 0.06322834374477754
+        },
+        {
+          "title": "Thaumcraft Research Cheatsheet",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Research_Cheatsheet",
+          "relevance": 0.05964571011572759
+        }
+      ],
+      "metrics": {
+        "response_length_words": 78,
+        "response_length_chars": 459,
+        "num_sources": 10,
+        "topics_covered": 2,
+        "topics_total": 3,
+        "topic_coverage_ratio": 0.6666666666666666,
+        "avg_relevance_score": 0.1145621365357293,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 64.46666666666667,
+        "query_time": 3.5379478931427,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:34.715419",
+      "category": "Edge Case",
+      "question": "What is the fastest way to reach end game?",
+      "expected_topics": [
+        "progression",
+        "advanced",
+        "tier"
+      ],
+      "response": " To reach endgame in GT New Horizons, one should focus on expanding their infrastructure for ore processing. The Electric Blast Furnace (EBF) is essential and can be made more efficient by using Wrought Iron Dust instead of Iron Dust to speed up the production of Steel. Additionally, building multiple EBFs with MV-powered energy hatches will significantly increase the speed at which you progress through the game.",
+      "sources": [
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.12670346098361923
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.11361199070975168
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.10312086210447878
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.09318309481280973
+        },
+        {
+          "title": "Electric Blast Furnace",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Electric_Blast_Furnace",
+          "relevance": 0.09050302505493163
+        },
+        {
+          "title": "Additional Mods",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Additional_Mods",
+          "relevance": 0.08501506048585306
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.083931033157117
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.08103799972286427
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.07396417528077862
+        },
+        {
+          "title": "Bees",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Bees",
+          "relevance": 0.06972373751477956
+        }
+      ],
+      "metrics": {
+        "response_length_words": 66,
+        "response_length_chars": 416,
+        "num_sources": 10,
+        "topics_covered": 0,
+        "topics_total": 3,
+        "topic_coverage_ratio": 0.0,
+        "avg_relevance_score": 0.09207944398269836,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": true,
+        "has_specific_terms": true,
+        "quality_score": 46.6,
+        "query_time": 3.035719871520996,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:42.045795",
+      "category": "Edge Case",
+      "question": "Can I skip the Bronze Age?",
+      "expected_topics": [
+        "bronze",
+        "progression",
+        "skip"
+      ],
+      "response": " According to the provided context, there is no information about skipping the Bronze Age in GT New Horizons. The progression of technology seems to follow a linear path from Fluid Drilling Rig (FDR), Forge Hammer (FH), and so on, suggesting that each stage must be completed before moving onto the next one.",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.09505639329720368
+        },
+        {
+          "title": "Dev Builds",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Dev_Builds",
+          "relevance": 0.0719776153564453
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.058788101915000134
+        },
+        {
+          "title": "Highly Ultimate Voltage (UHV)",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Highly_Ultimate_Voltage_%28UHV%29",
+          "relevance": 0.05849690437316894
+        },
+        {
+          "title": "Moon Travel Checklist",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Moon_Travel_Checklist",
+          "relevance": 0.055048232064967124
+        },
+        {
+          "title": "Additional Mods",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Additional_Mods",
+          "relevance": 0.04929042684004994
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.03658716125687871
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.03601156581790222
+        },
+        {
+          "title": "Beginner Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Beginner_Tips",
+          "relevance": 0.03268609001821314
+        },
+        {
+          "title": "Lootgames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Lootgames",
+          "relevance": 0.015063638936180353
+        }
+      ],
+      "metrics": {
+        "response_length_words": 52,
+        "response_length_chars": 308,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 3,
+        "topic_coverage_ratio": 1.0,
+        "avg_relevance_score": 0.05090061298760096,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 75.2,
+        "query_time": 2.3283960819244385,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:49.964022",
+      "category": "Recipe",
+      "question": "How do I craft a steam turbine?",
+      "expected_topics": [
+        "steam",
+        "turbine",
+        "craft",
+        "recipe"
+      ],
+      "response": " To craft a steam turbine in GT New Horizons, you cannot directly craft it. Instead, you need to assemble a Large Steam Turbine (LST), which requires placing a turbine inside each rotor assembly. Small turbines can be crafted with long magnalium rods available as early as LV, normal turbines require long titanium rods obtained at the end of HV after traveling to the moon, and large turbines need long tungstensteel rods available in IV after the tungsten processing line. However, the context does not provide information on how to craft or obtain the necessary components for these turbine sizes.",
+      "sources": [
+        {
+          "title": "Steam Age",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Steam_Age",
+          "relevance": 0.15711975778852189
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.1509745461600167
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.14383390095096266
+        },
+        {
+          "title": "Large Steam Turbine",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Large_Steam_Turbine",
+          "relevance": 0.13548729760306222
+        },
+        {
+          "title": "XL Turbo Plasma Turbine",
+          "url": "https://wiki.gtnewhorizons.com/wiki/XL_Turbo_Plasma_Turbine",
+          "relevance": 0.12291371481759207
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.10930710817870729
+        },
+        {
+          "title": "Papercraft",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Papercraft",
+          "relevance": 0.10023782065028095
+        },
+        {
+          "title": "Highly Ultimate Voltage (UHV)",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Highly_Ultimate_Voltage_%28UHV%29",
+          "relevance": 0.09636784962245395
+        },
+        {
+          "title": "Additional Mods",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Additional_Mods",
+          "relevance": 0.0713002358808204
+        },
+        {
+          "title": "Large Plasma Turbine",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Large_Plasma_Turbine",
+          "relevance": 0.06267446790422711
+        }
+      ],
+      "metrics": {
+        "response_length_words": 99,
+        "response_length_chars": 600,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.11502166995566451,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 69.9,
+        "query_time": 2.915928602218628,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:25:57.992411",
+      "category": "Recipe",
+      "question": "What ingredients are needed for aluminium production?",
+      "expected_topics": [
+        "aluminium",
+        "aluminum",
+        "production",
+        "ore"
+      ],
+      "response": " Aluminum production in GT New Horizons requires Bauxite ore as a starting ingredient. The bauxite then goes through various processing steps such as maceration, centrifuging, and washing to produce aluminum dust, which can be further refined into pure aluminum using the Electric Blast Furnace (EBF).",
+      "sources": [
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.16903256193449473
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.15792126472900705
+        },
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.1450358609118019
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.14123715266963405
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": 0.13795273682427783
+        },
+        {
+          "title": "MV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/MV",
+          "relevance": 0.08387823776380984
+        },
+        {
+          "title": "LV",
+          "url": "https://wiki.gtnewhorizons.com/wiki/LV",
+          "relevance": 0.07865200343657602
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.07056347102537795
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.06149780586283043
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.05821171834296634
+        }
+      ],
+      "metrics": {
+        "response_length_words": 45,
+        "response_length_chars": 301,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.1103982813500776,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 64.5,
+        "query_time": 3.0266048908233643,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:26:06.457296",
+      "category": "Specific Item",
+      "question": "What is a Large Steam Turbine used for?",
+      "expected_topics": [
+        "turbine",
+        "steam",
+        "power",
+        "generator"
+      ],
+      "response": " A Large Steam Turbine is used to generate power inside it by converting steam into distilled water. The turbine can be found in the context of GregTech New Horizons modpack, and its power output varies depending on the type of steam used (SC or SH). However, due to the limited capacity of the dynamo hatch, generating more EUt than it can handle is safe but voids excess energy. It's recommended to buffer the SC steam in ME fluid cells, a YOTTank, or a TFFT and extract it at an appropriate rate.",
+      "sources": [
+        {
+          "title": "Steam Age",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Steam_Age",
+          "relevance": 0.2650529861450195
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.22828050066261565
+        },
+        {
+          "title": "Thorium High Temperature Reactor",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thorium_High_Temperature_Reactor",
+          "relevance": 0.2202214888783223
+        },
+        {
+          "title": "Automation",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Automation",
+          "relevance": 0.19455738067626954
+        },
+        {
+          "title": "Large Steam Turbine",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Large_Steam_Turbine",
+          "relevance": 0.1916297522979934
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.18900930731350307
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.18359863506488353
+        },
+        {
+          "title": "XL Turbo Plasma Turbine",
+          "url": "https://wiki.gtnewhorizons.com/wiki/XL_Turbo_Plasma_Turbine",
+          "relevance": 0.15990398703615752
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.15472732484042542
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.14484835278097963
+        }
+      ],
+      "metrics": {
+        "response_length_words": 91,
+        "response_length_chars": 499,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.19318297156961695,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 69.1,
+        "query_time": 3.4631457328796387,
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "timestamp": "2025-12-17T10:26:13.912427",
+      "category": "Specific Item",
+      "question": "What does the Research Station do?",
+      "expected_topics": [
+        "research",
+        "station",
+        "unlock",
+        "recipe"
+      ],
+      "response": " The Research Station is a multiblock in GT New Horizons. It serves as a central hub for researching new recipes and technologies by combining the Thaumonomicon, Scribing Tools, Research Notes, and points from scanning things with the Thaumometer.",
+      "sources": [
+        {
+          "title": "Additional Mods",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Additional_Mods",
+          "relevance": 0.09865888641443145
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.08920509068915343
+        },
+        {
+          "title": "Thaumcraft Tips",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Tips",
+          "relevance": 0.05781227307838359
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.05174978604224471
+        },
+        {
+          "title": "Ore Processing",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Ore_Processing",
+          "relevance": 0.039130851465510874
+        },
+        {
+          "title": "Video Guides",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Video_Guides",
+          "relevance": 0.03310708999633788
+        },
+        {
+          "title": "Acronyms and Nicknames",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Acronyms_and_Nicknames",
+          "relevance": 0.030099316522584733
+        },
+        {
+          "title": "Thaumcraft Research Cheatsheet",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Thaumcraft_Research_Cheatsheet",
+          "relevance": 0.02693950945805634
+        },
+        {
+          "title": "Item Storage",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Item_Storage",
+          "relevance": -0.015887922989694696
+        },
+        {
+          "title": "Quick Links",
+          "url": "https://wiki.gtnewhorizons.com/wiki/Quick_Links",
+          "relevance": -0.017201469655622515
+        }
+      ],
+      "metrics": {
+        "response_length_words": 38,
+        "response_length_chars": 247,
+        "num_sources": 10,
+        "topics_covered": 3,
+        "topics_total": 4,
+        "topic_coverage_ratio": 0.75,
+        "avg_relevance_score": 0.03936134110213858,
+        "has_sources": true,
+        "has_numbers": false,
+        "has_lists": false,
+        "has_specific_terms": true,
+        "quality_score": 63.8,
+        "query_time": 2.4533050060272217,
+        "success": true,
+        "error": null
+      }
+    }
+  ]
+}
